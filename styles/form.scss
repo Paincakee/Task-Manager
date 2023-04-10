@@ -1,0 +1,195 @@
+// Define your colors
+$primary-color: #ffffff;
+$secondary-color: #3366cc;
+$light-gray: #cccccc;
+
+// Define your box shadow
+$box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+$box-shadow-nav: 0 0 10px rgba(100, 145, 230, 0.3);
+// Define a mixin to apply the colors and box shadow
+@mixin custom-style() {
+  background-color: $primary-color;
+  color: $secondary-color;
+  box-shadow: $box-shadow;
+}
+@mixin nav-style() {
+  background-color: $primary-color;
+  color: $secondary-color;
+  box-shadow: $box-shadow-nav;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  // height: 100vh;
+  background-color: $primary-color;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+  
+#register-form, #login-form, #createTask-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 250px auto;
+  width: 450px;
+  padding: 40px;
+  border-radius: 5px;
+  // @include custom-style;
+
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="password"],
+  textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    @include custom-style;
+  }
+  textarea{
+    resize: vertical;
+  }
+  
+  input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    @include custom-style;
+    
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-2px);
+      box-shadow: $box-shadow, 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+#error-text {
+  color: red;
+  font-size: 0.8em;
+  font-family: "Arial", sans-serif;
+  font-style: italic;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  min-width: 170px;
+  background-color: $primary-color;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  font-family: "Arial", sans-serif;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    @include nav-style;
+    li {
+      width: 100%;
+      
+      a,button {
+        display: block;
+        padding: 20px;
+        color: $secondary-color;
+        text-decoration: none;
+        text-align: center;
+        transition: all 0.3s ease;
+        @include nav-style;
+        &:hover {
+          background-color: $secondary-color;
+          color: $primary-color;
+        }
+      }
+      button{
+        
+        box-sizing: conte;
+      }
+    }
+  }
+}
+#createTask-btn {
+  position: relative;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  font-family: "Arial", sans-serif;
+  display: block;
+  position: fixed;
+  padding: 15px;
+  width: 200px;
+  color: $secondary-color;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: none  ;
+  @include nav-style;
+  &:hover {
+    background-color: $secondary-color;
+    color: $primary-color;
+  }
+}
+
+#tasks   {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.task-wrapper {
+  width: 1000px;
+  @include nav-style;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  &:hover{
+    // background-color: red;
+  }
+  .dateName-wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+    .task-name {
+      flex-grow: 1;
+      text-align: left;
+    }
+    
+    .task-date {
+      flex-grow: 1;
+      text-align: right;
+    }
+  }
+  
+  .task-description{
+    width: 100%;
+  }
+  .task-delete {
+    position: relative;
+    bottom: -5px;
+    right: -975px;
+  
+    a {
+      color: red;
+      text-decoration: none;
+      transition: transform 0.7s ease-in-out;
+      display: inline-block;
+      &:hover{
+        transform: rotate(360deg);
+        transform-origin: center;
+        font-weight: bold;
+      }
+    }
+  }
+  
+  
+}

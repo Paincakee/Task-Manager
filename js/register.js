@@ -1,4 +1,4 @@
-let form = document.getElementById('register-form');
+const form = document.getElementById('register-form');
 
 form.addEventListener('submit', function(e){
 
@@ -11,7 +11,7 @@ form.addEventListener('submit', function(e){
 
 async function sendData(formData) {  
     try {
-        const response = await fetch('api/sendData.php',{
+        const response = await fetch('api/sendAccount.php',{
             method: 'POST',
             body: formData
         });
@@ -19,6 +19,11 @@ async function sendData(formData) {
         const text = await response.text();
 
         console.log(text);
+        const errorText = document.getElementById('error-text');
+        errorText.innerHTML = text;
+        if (text == "Created") {
+            window.location.replace("login.php")
+        }   
 
     } catch (error) {
         console.log(error);

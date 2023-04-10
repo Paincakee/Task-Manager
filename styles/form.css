@@ -1,0 +1,182 @@
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+#register-form, #login-form, #createTask-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 250px auto;
+  width: 450px;
+  padding: 40px;
+  border-radius: 5px;
+}
+#register-form input[type=text],
+#register-form input[type=email],
+#register-form input[type=date],
+#register-form input[type=password],
+#register-form textarea, #login-form input[type=text],
+#login-form input[type=email],
+#login-form input[type=date],
+#login-form input[type=password],
+#login-form textarea, #createTask-form input[type=text],
+#createTask-form input[type=email],
+#createTask-form input[type=date],
+#createTask-form input[type=password],
+#createTask-form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #3366cc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#register-form textarea, #login-form textarea, #createTask-form textarea {
+  resize: vertical;
+}
+#register-form input[type=submit], #login-form input[type=submit], #createTask-form input[type=submit] {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #3366cc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#register-form input[type=submit]:hover, #login-form input[type=submit]:hover, #createTask-form input[type=submit]:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#error-text {
+  color: red;
+  font-size: 0.8em;
+  font-family: "Arial", sans-serif;
+  font-style: italic;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  min-width: 170px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  font-family: "Arial", sans-serif;
+}
+#navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background-color: #ffffff;
+  color: #3366cc;
+  box-shadow: 0 0 10px rgba(100, 145, 230, 0.3);
+}
+#navbar ul li {
+  width: 100%;
+}
+#navbar ul li a, #navbar ul li button {
+  display: block;
+  padding: 20px;
+  color: #3366cc;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  color: #3366cc;
+  box-shadow: 0 0 10px rgba(100, 145, 230, 0.3);
+}
+#navbar ul li a:hover, #navbar ul li button:hover {
+  background-color: #3366cc;
+  color: #ffffff;
+}
+#navbar ul li button {
+  box-sizing: conte;
+}
+
+#createTask-btn {
+  position: relative;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Arial", sans-serif;
+  display: block;
+  position: fixed;
+  padding: 15px;
+  width: 200px;
+  color: #3366cc;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: none;
+  background-color: #ffffff;
+  color: #3366cc;
+  box-shadow: 0 0 10px rgba(100, 145, 230, 0.3);
+}
+#createTask-btn:hover {
+  background-color: #3366cc;
+  color: #ffffff;
+}
+
+#tasks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.task-wrapper {
+  width: 1000px;
+  background-color: #ffffff;
+  color: #3366cc;
+  box-shadow: 0 0 10px rgba(100, 145, 230, 0.3);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.task-wrapper .dateName-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.task-wrapper .dateName-wrapper .task-name {
+  flex-grow: 1;
+  text-align: left;
+}
+.task-wrapper .dateName-wrapper .task-date {
+  flex-grow: 1;
+  text-align: right;
+}
+.task-wrapper .task-description {
+  width: 100%;
+}
+.task-wrapper .task-delete {
+  position: relative;
+  bottom: -5px;
+  right: -975px;
+}
+.task-wrapper .task-delete a {
+  color: red;
+  text-decoration: none;
+  transition: transform 0.7s ease-in-out;
+  display: inline-block;
+}
+.task-wrapper .task-delete a:hover {
+  transform: rotate(360deg);
+  transform-origin: center;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=form.css.map */

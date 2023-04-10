@@ -1,7 +1,6 @@
-let form = document.getElementById('login-form');
+const form = document.getElementById('createTask-form');
 
 form.addEventListener('submit', function(e){
-
     e.preventDefault();
 
     let formData = new FormData(form);
@@ -9,9 +8,9 @@ form.addEventListener('submit', function(e){
     sendData(formData);
 })
 
-async function sendData(formData) {  
+async function sendData(formData) {
     try {
-        const response = await fetch('api/getAccount.php',{
+        const response = await fetch('api/sendTask.php', {
             method: 'POST',
             body: formData
         });
@@ -19,12 +18,10 @@ async function sendData(formData) {
         const text = await response.text();
 
         console.log(text);
-        const errorText = document.getElementById('error-text');
-        errorText.innerHTML = text;
-        if(text == "true") {
-            window.location.replace("dashboard.php");
-        }
 
+        if (text == "Created") {
+            window.location.replace("task.php")
+        } 
     } catch (error) {
         console.log(error);
     }

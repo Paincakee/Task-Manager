@@ -12,7 +12,7 @@ async function clearSessions() {
         });
 
         
-        window.location.reload();
+        window.location.replace("login.php");
 
     } catch (error) {
         console.log(error);
