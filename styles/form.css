@@ -129,6 +129,10 @@ body {
   color: #ffffff;
 }
 
+#task-body {
+  overflow-x: hidden;
+}
+
 #tasks {
   display: flex;
   justify-content: center;
@@ -177,6 +181,26 @@ body {
   transform: rotate(360deg);
   transform-origin: center;
   font-weight: bold;
+}
+
+.date-container {
+  margin-top: 50px;
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 1px;
+}
+.date-container .date-block {
+  border: 1px solid rgba(51, 102, 204, 0.4);
+  height: 150px;
+  width: 14.2857142857%;
+  box-sizing: border-box;
+  margin: 0 -1px -1px 0;
+  padding: 1px;
+  background-color: #ffffff;
+  color: #3366cc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 /*# sourceMappingURL=form.css.map */

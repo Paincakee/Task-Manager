@@ -136,7 +136,9 @@ body {
     color: $primary-color;
   }
 }
-
+#task-body{
+  overflow-x: hidden;
+}
 #tasks   {
   display: flex;
   justify-content: center;
@@ -193,3 +195,23 @@ body {
   
   
 }
+.date-container{
+  margin-top: 50px;
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 1px;
+
+  .date-block {
+    border: 1px solid rgba(51, 102, 204, 0.4);
+    height: 150px;
+    width: calc(100% / 7);
+    box-sizing: border-box;
+    margin: 0 -1px -1px 0;
+    padding: 1px;
+    @include custom-style;
+  }
+}
+
+

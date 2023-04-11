@@ -41,6 +41,7 @@ $result = $stmt->get_result();
 
 // Check if email exists
 if ($result->num_rows == 0) {
+    http_response_code(409);
     die('Invalid email or password. Please try again.');
 }
 

@@ -15,7 +15,7 @@ if(!isset($_SESSION['loggedIn'])) {
         <title>Tasks</title>
         <link rel="stylesheet" href="styles/form.css">
     </head>
-    <body onload="getTasks();">
+    <body id="task-body" onload="getTasks();">
         <?=navbar();?>
 
         <a id='createTask-btn' href="createTask.php">New Task</a>
