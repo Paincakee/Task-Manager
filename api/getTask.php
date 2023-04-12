@@ -15,7 +15,7 @@ if ($mysqli->connect_errno) {
 }
 $creatorId = $_SESSION['id'];
 // Build the query to fetch data for the selected difficulty
-$query = "SELECT * FROM `tasks` WHERE `creatorId` = $creatorId ORDER BY `date`";
+$query = "SELECT * FROM `tasks` WHERE `creatorId` = $creatorId ORDER BY `completed` ASC, `date` ASC";
 
 // Execute the query
 $result = $mysqli->query($query);
