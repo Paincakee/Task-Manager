@@ -15,7 +15,7 @@ if (!isset($_SESSION['data'])) {
                 <div class="task-date"><?=$data['date']?></div>
             </div>
             <div class="task-description"><?=$data['taskDescription']?></div>
-            <div class="task-delete"><a href="#" class="delete-task">✖</a></div>
+            <div class="task-delete"><a href="https://github.com/Paincakee/Task-Manager" class="delete-task">✖</a></div>
         </div>
         <?php 
     } 

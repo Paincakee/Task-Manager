@@ -37,6 +37,16 @@ $data = $result->fetch_all(MYSQLI_ASSOC);
 
 // Store the data in the session
 $_SESSION['dataId'] = $data;
+// var_dump($_SESSION['dataId'][0]['completed']);
+if ($_SESSION['dataId'][0]['completed'] == 0) {
+    
+    
+    echo '<button id="complete-btn">Complete task</button>';
+    
+    
+    
+}
+
 
 // Free the result set
 $result->free();
@@ -46,4 +56,4 @@ header('Content-Type: application/json');
 
 // Return the data as JSON
 // echo json_encode($data);
-var_dump($data);
+// var_dump($data);
