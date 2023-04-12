@@ -22,6 +22,7 @@ if (isset($_GET['query'])) {
     $stmt->bind_result($id, $usernames);
     while ($stmt->fetch()) {
         $results[$id] = $usernames;
+        
     }
     // Return the search results as a JSON response
     header('Content-Type: application/json');
