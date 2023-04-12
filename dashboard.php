@@ -21,7 +21,7 @@ if(!isset($_SESSION['loggedIn'])) {
         <?=htmlspecialchars($_SESSION['username'] . '#' . $_SESSION['user_code'])?>
         
         
-        <script src="js/logout.js"></script>
+        <script src="js/account/logout.js"></script>
     </body>
 </html>
     

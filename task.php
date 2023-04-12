@@ -24,7 +24,7 @@ if(!isset($_SESSION['loggedIn'])) {
 
 
 
-        <script src="js/logout.js"></script>
+        <script src="js/account/logout.js"></script>
         <script src="js/showTask.js"></script>
     </body>
 </html>

@@ -38,4 +38,4 @@ $result->free();
 header('Content-Type: application/json');
 
 // Return the data as JSON
-echo json_encode($data);
+echo json_encode($_SESSION['data']);

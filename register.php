@@ -27,6 +27,6 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']) {
 
 
 
-    <script src="js/register.js"></script>
+    <script src="js/account/register.js"></script>
 </body>
 </html>

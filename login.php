@@ -24,6 +24,6 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']) {
         <span id="error-text"></span>
     </form>
 
-    <script src="js/login.js"></script>
+    <script src="js/account/login.js"></script>
 </body>
 </html>

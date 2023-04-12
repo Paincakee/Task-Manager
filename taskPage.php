@@ -24,6 +24,6 @@ if (isset($_GET['id'])) {
     
     <script src="js/getTaskPage.js"></script>
     <script src="js/completeTask.js"></script>
-    <script src="js/logout.js"></script>
+    <script src="js/account/logout.js"></script>
 </body>
 </html>

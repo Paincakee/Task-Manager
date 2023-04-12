@@ -25,7 +25,7 @@ if(!isset($_SESSION['loggedIn'])) {
             <input type="submit" value="Create Task">
         </form>
         <script src="js/createTask.js"></script>
-        <script src="js/logout.js"></script>
+        <script src="js/account/logout.js"></script>
     </body>
 </html>
     

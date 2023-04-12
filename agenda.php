@@ -7,9 +7,9 @@ $tasksByDay = array();
 // Get the number of days in the month
 $numDays = cal_days_in_month(CAL_GREGORIAN, $month, $year);
 
-// Loop through each day in the month
-
-
+if (!isset($_SESSION['data'])) {
+    header("Refresh:0");
+} 
 
 ?>
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ $numDays = cal_days_in_month(CAL_GREGORIAN, $month, $year);
     <title>Document</title>
     <link rel="stylesheet" href="styles/form.css">
 </head>
-<body onload="getData();">
+<body onload="getTasks();">
     <?=navbar();?>
     
     <div class="date-container">
@@ -59,6 +59,6 @@ $numDays = cal_days_in_month(CAL_GREGORIAN, $month, $year);
     
     </div>
 <script src="js/getAgendaTask.js"></script>
-<script src="js/logout.js"></script>
+<script src="js/account/logout.js"></script>
 </body>
 </html>

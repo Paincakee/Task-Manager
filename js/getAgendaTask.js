@@ -12,3 +12,7 @@ async function getData() {
         console.log(error);
     }
 }
+async function getTasks(){
+    await getData();
+}
+
