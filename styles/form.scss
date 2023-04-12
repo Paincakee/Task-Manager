@@ -5,12 +5,18 @@ $light-gray: #cccccc;
 
 // Define your box shadow
 $box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+$box-shadow-hover: 0 0 20px rgba(50, 95, 179, 0.5);
 $box-shadow-nav: 0 0 10px rgba(100, 145, 230, 0.3);
 // Define a mixin to apply the colors and box shadow
 @mixin custom-style() {
   background-color: $primary-color;
   color: $secondary-color;
   box-shadow: $box-shadow;
+}
+@mixin custom-style-hover() {
+  background-color: $primary-color;
+  color: $secondary-color;
+  box-shadow: $box-shadow-hover;
 }
 @mixin nav-style() {
   background-color: $primary-color;
@@ -154,7 +160,8 @@ body {
   padding: 10px;
   margin-bottom: 10px;
   &:hover{
-    // background-color: red;
+    @include custom-style-hover;
+    cursor: pointer;
   }
   .dateName-wrapper{
     display: flex;
@@ -212,6 +219,9 @@ body {
     padding: 1px;
     @include custom-style;
   }
+}
+.task-span{
+  font-weight: bolder;
 }
 
 

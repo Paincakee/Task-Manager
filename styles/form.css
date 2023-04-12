@@ -150,6 +150,12 @@ body {
   padding: 10px;
   margin-bottom: 10px;
 }
+.task-wrapper:hover {
+  background-color: #ffffff;
+  color: #3366cc;
+  box-shadow: 0 0 20px rgba(50, 95, 179, 0.5);
+  cursor: pointer;
+}
 .task-wrapper .dateName-wrapper {
   display: flex;
   flex-direction: row;
@@ -201,6 +207,10 @@ body {
   background-color: #ffffff;
   color: #3366cc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.task-span {
+  font-weight: bolder;
 }
 
 /*# sourceMappingURL=form.css.map */
