@@ -10,7 +10,7 @@ function navbar(){
         <ul>
             <li><a href="dashboard.php">Dashboard</a></li>
             <li><a href="agenda.php">Agenda</a></li>
-            <li><a href="task.php">Tasks</a></li>
+            <li><a href="projectCollection.php">Projects</a></li>
             <li><a href="#">Settings</a></li>
             <li><a id="logout-btn">Logout</a></li>
         </ul>

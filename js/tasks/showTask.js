@@ -28,7 +28,7 @@ async function getTasks(){
         taskWrapper.addEventListener('click', event => {
             const clickedTaskWrapper = event.target.closest('.task-wrapper');
             const taskId = clickedTaskWrapper.getAttribute('data-task-id');
-            window.location.href = `taskPage.php?id=${taskId}`; 
+            window.location.href = `taskInfo.php?id=${taskId}`; 
             console.log(taskId);
         });
     });

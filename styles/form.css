@@ -6,7 +6,7 @@ body {
   line-height: 1.5;
 }
 
-#register-form, #login-form, #createTask-form {
+#register-form, #login-form, #createTask-form, #createProject-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,7 +27,11 @@ body {
 #createTask-form input[type=email],
 #createTask-form input[type=date],
 #createTask-form input[type=password],
-#createTask-form textarea {
+#createTask-form textarea, #createProject-form input[type=text],
+#createProject-form input[type=email],
+#createProject-form input[type=date],
+#createProject-form input[type=password],
+#createProject-form textarea {
   display: block;
   width: 100%;
   margin-bottom: 20px;
@@ -38,10 +42,10 @@ body {
   color: #3366cc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-#register-form textarea, #login-form textarea, #createTask-form textarea {
+#register-form textarea, #login-form textarea, #createTask-form textarea, #createProject-form textarea {
   resize: vertical;
 }
-#register-form input[type=submit], #login-form input[type=submit], #createTask-form input[type=submit] {
+#register-form input[type=submit], #login-form input[type=submit], #createTask-form input[type=submit], #createProject-form input[type=submit] {
   display: block;
   width: 100%;
   padding: 15px;
@@ -51,7 +55,7 @@ body {
   color: #3366cc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-#register-form input[type=submit]:hover, #login-form input[type=submit]:hover, #createTask-form input[type=submit]:hover {
+#register-form input[type=submit]:hover, #login-form input[type=submit]:hover, #createTask-form input[type=submit]:hover, #createProject-form input[type=submit]:hover {
   cursor: pointer;
   transform: translateY(-2px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.1);

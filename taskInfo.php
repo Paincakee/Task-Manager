@@ -22,8 +22,8 @@ if (isset($_GET['id'])) {
 
     <div id="btn-complete-spot"></div>
     
-    <script src="js/getTaskPage.js"></script>
-    <script src="js/completeTask.js"></script>
+    <script src="js/tasks/getTaskPage.js"></script>
+    <script src="js/tasks/completeTask.js"></script>
     <script src="js/account/logout.js"></script>
 </body>
 </html>

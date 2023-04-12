@@ -24,7 +24,7 @@ if(!isset($_SESSION['loggedIn'])) {
             <textarea name="taskDescription" id="taskDescription" cols="30" rows="10" placeholder="Describe the task"></textarea>
             <input type="submit" value="Create Task">
         </form>
-        <script src="js/createTask.js"></script>
+        <script src="js/tasks/createTask.js"></script>
         <script src="js/account/logout.js"></script>
     </body>
 </html>

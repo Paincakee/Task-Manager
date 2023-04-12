@@ -15,17 +15,17 @@ if(!isset($_SESSION['loggedIn'])) {
         <title>Tasks</title>
         <link rel="stylesheet" href="styles/form.css">
     </head>
-    <body id="task-body" onload="getTasks();">
+    <body id="project-body" onload="">
         <?=navbar();?>
 
-        <a id='createTask-btn' href="createTask.php">New Task</a>
+        <a id='createTask-btn' href="createProject.php">New Project</a>
 
-        <div id="tasks"></div>
+        <div id="projects-collection"></div>
 
 
 
         <script src="js/account/logout.js"></script>
-        <script src="js/showTask.js"></script>
+
     </body>
 </html>
     

@@ -58,7 +58,7 @@ if (!isset($_SESSION['data'])) {
     ?>
     
     </div>
-<script src="js/getAgendaTask.js"></script>
+<script src="js/tasks/getAgendaTask.js"></script>
 <script src="js/account/logout.js"></script>
 </body>
 </html>
