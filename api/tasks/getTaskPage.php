@@ -21,7 +21,7 @@ if ($mysqli->connect_errno) {
     die('Failed to connect to MySQL: ' . $mysqli->connect_error);
 }
 // $id = 2;
-// Build the query to fetch data for the selected difficulty
+
 $query = "SELECT * FROM `tasks` WHERE `id` = $id";
 
 // Execute the query

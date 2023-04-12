@@ -16,7 +16,7 @@ $mysqli = new mysqli($host, $username, $password, $database);
 $taskName = $_POST['taskName'];
 $date = $_POST['taskDate'];
 $taskDescription = $_POST['taskDescription'];
-$creatorId = $_SESSION['id'];
+$creatorId = $_SESSION['user_code'];
 $completed = false;
 if ($mysqli->connect_errno) {
     die('Failed to connect to MySQL: ' . $mysqli->connect_error);

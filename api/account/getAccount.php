@@ -59,6 +59,8 @@ $_SESSION['user'] = $userData['email'];
 $_SESSION['firstname'] = $userData['firstname'];
 $_SESSION['lastname'] = $userData['lastname'];
 $_SESSION['id'] = $userData['id'];
+$_SESSION['username'] = $userData['username'];
+$_SESSION['user_code'] = $userData['user_code'];
 
 // Free the result set
 $result->free();
