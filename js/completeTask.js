@@ -1,6 +1,6 @@
-let button = document.getElementById('btn-complete-spot');
+let btn_complete = document.getElementById('btn-complete-spot');
 
-button.addEventListener('click', function(e){
+btn_complete.addEventListener('click', function(e){
     sendData();
 
     window.location.reload();
@@ -8,7 +8,7 @@ button.addEventListener('click', function(e){
 
 async function sendData() {
     try {
-        const response = await fetch('api/completeTask.php', {
+        const response = await fetch('api/tasks/completeTask.php', {
             method: 'GET'
         });
 

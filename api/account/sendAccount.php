@@ -60,5 +60,5 @@ if ($stmt->execute()) {
     echo "Created";
 } else {
     http_response_code(500);
-    echo json_encode(['error' => 'Error inserting data: ' . $mysqli->error]);
+    echo json_encode(['error' => 'Error inserting data: ']);
 }

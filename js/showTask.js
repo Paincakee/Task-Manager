@@ -1,6 +1,6 @@
 async function getData() {
     try {
-        const response = await fetch('api/getTask.php', {
+        const response = await fetch('api/tasks/getTask.php', {
             method: 'GET',
         });
 
@@ -16,7 +16,7 @@ async function getData() {
 async function getTasks(){
     await getData();
 
-    const response = await fetch("api/getTaskTable.php")
+    const response = await fetch("api/tasks/getTaskTable.php")
     let text = await response.text()
 
     const taskDiv = document.getElementById('tasks');

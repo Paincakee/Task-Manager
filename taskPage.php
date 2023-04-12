@@ -19,10 +19,11 @@ if (isset($_GET['id'])) {
 <?=navbar();?>
     Hier komt task description fullscreen <br>
     TASK = <?=$_GET['id']?>
-    
+
     <div id="btn-complete-spot"></div>
     
     <script src="js/getTaskPage.js"></script>
     <script src="js/completeTask.js"></script>
+    <script src="js/logout.js"></script>
 </body>
 </html>

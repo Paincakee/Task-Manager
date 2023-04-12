@@ -1,6 +1,6 @@
 async function getData() {
     try {
-        const response = await fetch('api/getTaskPage.php', {
+        const response = await fetch('api/tasks/getTaskPage.php', {
             method: 'GET',
         });
 

@@ -59,5 +59,6 @@ $numDays = cal_days_in_month(CAL_GREGORIAN, $month, $year);
     
     </div>
 <script src="js/getAgendaTask.js"></script>
+<script src="js/logout.js"></script>
 </body>
 </html>

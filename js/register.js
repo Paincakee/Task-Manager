@@ -11,7 +11,7 @@ form.addEventListener('submit', function(e){
 
 async function sendData(formData) {  
     try {
-        const response = await fetch('api/sendAccount.php',{
+        const response = await fetch('api/account/sendAccount.php',{
             method: 'POST',
             body: formData
         });
