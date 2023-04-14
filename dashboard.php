@@ -18,7 +18,7 @@ if(!isset($_SESSION['loggedIn'])) {
     <body onload="">
         <?=navbar();?>
         Hello
-        <?=htmlspecialchars($_SESSION['username'] . '#' . $_SESSION['user_code'])?>
+        <?=htmlspecialchars($_SESSION['username'] . '#' . $_SESSION['user_code'] . " Id:" . $_SESSION['id'])?>
         
         
         <script src="js/account/logout.js"></script>

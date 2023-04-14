@@ -25,8 +25,9 @@ async function sendData(formData) {
         if (text == "Created") {
             const queryParams = new URLSearchParams(window.location.search);
             const id = queryParams.get('project_id');
+            const name = queryParams.get('project_name');
             console.log(id);
-            window.location.href = `project.php?project_id=${id}`; 
+            window.location.href = `project.php?project_id=${id}&project_name=${name}`; 
             
         } 
     } catch (error) {

@@ -21,7 +21,7 @@ if(isset($_GET['project_id'])){
         <?=navbar();?>
        
         <form id="createTask-form" action="" method="post">
-            <input type="text" id="taskName" name="taskName" placeholder="Task Name" required>
+            <input type="text" id="taskName" name="taskName" placeholder="Task Name" max="10" required>
             <input type="date" name="taskDate" id="taskDate" required>
             <textarea name="taskDescription" id="taskDescription" cols="30" rows="10" placeholder="Describe the task" required></textarea>
             <input type="submit" value="Create Task">

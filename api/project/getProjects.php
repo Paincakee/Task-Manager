@@ -14,33 +14,11 @@ if ($mysqli->connect_errno) {
     die('Failed to connect to MySQL: ' . $mysqli->connect_error);
 }
 
-$creatorId = $_SESSION['user_code'];
+$accountCode = $_SESSION['user_code'];
+$accountId = $_SESSION['id'];
 
 // Build the query to fetch data for the selected difficulty
-$query = "SELECT `id` FROM `account`";
-
-// Execute the query
-$result = $mysqli->query($query);
-
-// Check for errors
-if (!$result) {
-    die('Failed to retrieve data from the account table: ' . $mysqli->error);
-}
-
-// Fetch all data as an associative array
-$data = $result->fetch_all(MYSQLI_ASSOC);
-
-$contributorIds = "";
-foreach ($data as $row) {
-    $contributorIds .= $row['id'] . ",";
-}
-
-// Remove the trailing comma
-$contributorIds = rtrim($contributorIds, ",");
-
-// Build the query to fetch data for the selected difficulty
-$query = "SELECT * FROM `projects` WHERE `creator` = '$creatorId' OR FIND_IN_SET('$contributorIds', `contributor`)";
-
+$query = "SELECT * FROM `projects` WHERE `creator` = '$accountCode' OR FIND_IN_SET('$accountId', `contributors`) > 0";
 
 // Execute the query
 $result = $mysqli->query($query);
