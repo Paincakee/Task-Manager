@@ -7,7 +7,7 @@ $tasksByDay = array();
 // Get the number of days in the month
 $numDays = cal_days_in_month(CAL_GREGORIAN, $month, $year);
 
-if (!isset($_SESSION['data'])) {
+if (!isset($_SESSION['dataTask'])) {
     header("Refresh:0");
 } 
 
@@ -28,7 +28,7 @@ if (!isset($_SESSION['data'])) {
     <?php
         $tasksByDay = array();
         for ($day = 1; $day <= $numDays; $day++) {
-            foreach($_SESSION['data'] as $data) {
+            foreach($_SESSION['dataTask'] as $data) {
                 $yearF = substr($data['date'], 0, 4);
                 $monthF = substr($data['date'], 5, 2);
                 $dayF = substr($data['date'], 8, 2);

@@ -10,7 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 250px auto;
+  margin: 150px auto;
   width: 450px;
   padding: 40px;
   border-radius: 5px;
@@ -19,19 +19,23 @@ body {
 #register-form input[type=email],
 #register-form input[type=date],
 #register-form input[type=password],
-#register-form textarea, #login-form input[type=text],
+#register-form textarea,
+#register-form select, #login-form input[type=text],
 #login-form input[type=email],
 #login-form input[type=date],
 #login-form input[type=password],
-#login-form textarea, #createTask-form input[type=text],
+#login-form textarea,
+#login-form select, #createTask-form input[type=text],
 #createTask-form input[type=email],
 #createTask-form input[type=date],
 #createTask-form input[type=password],
-#createTask-form textarea, #createProject-form input[type=text],
+#createTask-form textarea,
+#createTask-form select, #createProject-form input[type=text],
 #createProject-form input[type=email],
 #createProject-form input[type=date],
 #createProject-form input[type=password],
-#createProject-form textarea {
+#createProject-form textarea,
+#createProject-form select {
   display: block;
   width: 100%;
   margin-bottom: 20px;
@@ -41,6 +45,10 @@ body {
   background-color: #ffffff;
   color: #3366cc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#register-form select, #login-form select, #createTask-form select, #createProject-form select {
+  width: 480px;
+  box-sizing: border-box;
 }
 #register-form textarea, #login-form textarea, #createTask-form textarea, #createProject-form textarea {
   resize: vertical;
@@ -109,7 +117,7 @@ body {
   box-sizing: conte;
 }
 
-#createTask-btn {
+#createTask-btn, #createProject-btn {
   position: relative;
   top: 10px;
   left: 50%;
@@ -128,7 +136,7 @@ body {
   color: #3366cc;
   box-shadow: 0 0 10px rgba(100, 145, 230, 0.3);
 }
-#createTask-btn:hover {
+#createTask-btn:hover, #createProject-btn:hover {
   background-color: #3366cc;
   color: #ffffff;
 }
@@ -137,7 +145,7 @@ body {
   overflow-x: hidden;
 }
 
-#tasks {
+#tasks, #projects {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,7 +153,7 @@ body {
   margin-top: 100px;
 }
 
-.task-wrapper {
+.task-wrapper, .projects-wrapper {
   width: 1000px;
   background-color: #ffffff;
   color: #3366cc;
@@ -154,40 +162,40 @@ body {
   padding: 10px;
   margin-bottom: 10px;
 }
-.task-wrapper:hover {
+.task-wrapper:hover, .projects-wrapper:hover {
   background-color: #ffffff;
   color: #3366cc;
   box-shadow: 0 0 20px rgba(50, 95, 179, 0.5);
   cursor: pointer;
 }
-.task-wrapper .dateName-wrapper {
+.task-wrapper .dateName-wrapper, .projects-wrapper .dateName-wrapper {
   display: flex;
   flex-direction: row;
   width: 100%;
 }
-.task-wrapper .dateName-wrapper .task-name {
+.task-wrapper .dateName-wrapper .task-name, .projects-wrapper .dateName-wrapper .task-name {
   flex-grow: 1;
   text-align: left;
 }
-.task-wrapper .dateName-wrapper .task-date {
+.task-wrapper .dateName-wrapper .task-date, .projects-wrapper .dateName-wrapper .task-date {
   flex-grow: 1;
   text-align: right;
 }
-.task-wrapper .task-description {
+.task-wrapper .task-description, .projects-wrapper .task-description {
   width: 100%;
 }
-.task-wrapper .task-delete {
+.task-wrapper .task-delete, .projects-wrapper .task-delete {
   position: relative;
   bottom: -5px;
   right: -975px;
 }
-.task-wrapper .task-delete a {
+.task-wrapper .task-delete a, .projects-wrapper .task-delete a {
   color: red;
   text-decoration: none;
   transition: transform 0.7s ease-in-out;
   display: inline-block;
 }
-.task-wrapper .task-delete a:hover {
+.task-wrapper .task-delete a:hover, .projects-wrapper .task-delete a:hover {
   transform: rotate(360deg);
   transform-origin: center;
   font-weight: bold;

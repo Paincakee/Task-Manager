@@ -2,12 +2,12 @@
 session_start();
 
 // Generate the HTML table based on the current leaderboard data
-if (!isset($_SESSION['data'])) {
+if (!isset($_SESSION['dataTask'])) {
     // If there's no leaderboard data, display a message
     echo '<p>No Task Made</p>';
 } else {
 
-    foreach($_SESSION['data'] as $data) {
+    foreach($_SESSION['dataTask'] as $data) {
         ?>
         <div class="task-wrapper" data-task-id="<?=$data['id']?>">
             <div class="dateName-wrapper">

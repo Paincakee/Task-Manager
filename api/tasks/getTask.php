@@ -13,9 +13,9 @@ $mysqli = new mysqli($host, $username, $password, $database);
 if ($mysqli->connect_errno) {
     die('Failed to connect to MySQL: ' . $mysqli->connect_error);
 }
-$creatorId = $_SESSION['user_code'];
+$creatorId = $_SESSION['project_id'];
 // Build the query to fetch data for the selected difficulty
-$query = "SELECT * FROM `tasks` WHERE `creatorId` = '$creatorId' ORDER BY `completed` ASC, `date` ASC";
+$query = "SELECT * FROM `tasks` WHERE `project_id` = '$creatorId' ORDER BY `completed` ASC, `date` ASC";
 
 // Execute the query
 $result = $mysqli->query($query);
@@ -29,7 +29,7 @@ if (!$result) {
 $data = $result->fetch_all(MYSQLI_ASSOC);
 
 // Store the data in the session
-$_SESSION['data'] = $data;
+$_SESSION['dataTask'] = $data;
 
 // Free the result set
 $result->free();
@@ -38,4 +38,4 @@ $result->free();
 header('Content-Type: application/json');
 
 // Return the data as JSON
-echo json_encode($_SESSION['data']);
+echo json_encode($_SESSION['dataTask']);

@@ -15,15 +15,15 @@ if(!isset($_SESSION['loggedIn'])) {
         <title>Tasks</title>
         <link rel="stylesheet" href="styles/form.css">
     </head>
-    <body id="project-body" onload="">
+    <body id="project-body" onload="getProjects();">
         <?=navbar();?>
 
-        <a id='createTask-btn' href="createProject.php">New Project</a>
+        <a id='createProject-btn' href="createProject.php">New Project</a>
 
-        <div id="projects-collection"></div>
+        <div id="projects"></div>
 
 
-
+        <script src="js/project/showProject.js"></script>
         <script src="js/account/logout.js"></script>
 
     </body>

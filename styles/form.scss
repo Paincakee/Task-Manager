@@ -1,12 +1,20 @@
 // Define your colors
 $primary-color: #ffffff;
+// $primary-color: #000000;
 $secondary-color: #3366cc;
+// $secondary-color: #ffffff;
 $light-gray: #cccccc;
 
 // Define your box shadow
 $box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 $box-shadow-hover: 0 0 20px rgba(50, 95, 179, 0.5);
+
+// $box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+// $box-shadow-hover: 0 0 20px rgba(180, 180, 180, 1);
+
 $box-shadow-nav: 0 0 10px rgba(100, 145, 230, 0.3);
+// $box-shadow-nav: 0 0 10px rgba(255, 255, 255, 0.7);
+
 // Define a mixin to apply the colors and box shadow
 @mixin custom-style() {
   background-color: $primary-color;
@@ -37,7 +45,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 250px auto;
+  margin: 150px auto;
   width: 450px;
   padding: 40px;
   border-radius: 5px;
@@ -56,6 +64,10 @@ body {
     border: none;
     border-radius: 5px;
     @include custom-style;
+  }
+  select{
+    width: 480px;
+    box-sizing: border-box;
   }
   textarea{
     resize: vertical;
@@ -121,7 +133,7 @@ body {
     }
   }
 }
-#createTask-btn {
+#createTask-btn, #createProject-btn {
   position: relative;
   top: 10px;
   left: 50%;
@@ -146,7 +158,7 @@ body {
 #task-body{
   overflow-x: hidden;
 }
-#tasks   {
+#tasks, #projects   {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -154,7 +166,7 @@ body {
   margin-top: 100px;
 }
 
-.task-wrapper {
+.task-wrapper, .projects-wrapper {
   width: 1000px;
   @include nav-style;
   border-radius: 10px;

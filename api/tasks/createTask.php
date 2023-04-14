@@ -18,15 +18,16 @@ $date = $_POST['taskDate'];
 $taskDescription = $_POST['taskDescription'];
 $creatorId = $_SESSION['user_code'];
 $completed = false;
+$projectId = $_SESSION['project_id'];
 if ($mysqli->connect_errno) {
     die('Failed to connect to MySQL: ' . $mysqli->connect_error);
 }
 
 
 // Insert the data into the database
-$sql = "INSERT INTO `tasks`(`id`, `taskName`, `date`, `taskDescription`, `creatorId`, `completed`) VALUES (null, ?, ?, ?, ?, ?)";
+$sql = "INSERT INTO `tasks`(`id`, `taskName`, `date`, `taskDescription`, `creatorId`, `completed`, `project_id`) VALUES (null, ?, ?, ?, ?, ?, ?)";
 $stmt = $mysqli->prepare($sql);
-$stmt->bind_param("ssssi", $taskName, $date, $taskDescription, $creatorId, $completed ); 
+$stmt->bind_param("ssssis", $taskName, $date, $taskDescription, $creatorId, $completed, $projectId); 
 
 if ($stmt->execute()) {
     echo 'Created';

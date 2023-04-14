@@ -1,5 +1,7 @@
 const form = document.getElementById('createTask-form');
 
+
+
 form.addEventListener('submit', function(e){
     e.preventDefault();
 
@@ -19,8 +21,13 @@ async function sendData(formData) {
 
         console.log(text);
 
+
         if (text == "Created") {
-            window.location.replace("task.php")
+            const queryParams = new URLSearchParams(window.location.search);
+            const id = queryParams.get('project_id');
+            console.log(id);
+            window.location.href = `project.php?project_id=${id}`; 
+            
         } 
     } catch (error) {
         console.log(error);
