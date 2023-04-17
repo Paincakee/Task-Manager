@@ -1,6 +1,6 @@
 async function getData() {
     try {
-        const response = await fetch('api/tasks/getTask.php', {
+        const response = await fetch('api/tasks/getAgenda.php', {
             method: 'GET',
         });
 
@@ -12,7 +12,5 @@ async function getData() {
         console.log(error);
     }
 }
-async function getTasks(){
-    await getData();
-}
+
 

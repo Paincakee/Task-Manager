@@ -7,8 +7,8 @@ $tasksByDay = array();
 // Get the number of days in the month
 $numDays = cal_days_in_month(CAL_GREGORIAN, $month, $year);
 
-if (!isset($_SESSION['dataTask'])) {
-    header("Refresh:0");
+if (!isset($_SESSION['dataAgenda'])) {
+    // header("Refresh:0");
 } 
 
 ?>
@@ -20,15 +20,16 @@ if (!isset($_SESSION['dataTask'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/form.css">
+    
 </head>
-<body onload="getTasks();">
+<body onload="getData();">
     <?=navbar();?>
     
     <div class="date-container">
     <?php
         $tasksByDay = array();
         for ($day = 1; $day <= $numDays; $day++) {
-            foreach($_SESSION['dataTask'] as $data) {
+            foreach($_SESSION['dataAgenda'] as $data) {
                 $yearF = substr($data['date'], 0, 4);
                 $monthF = substr($data['date'], 5, 2);
                 $dayF = substr($data['date'], 8, 2);
@@ -58,7 +59,7 @@ if (!isset($_SESSION['dataTask'])) {
     ?>
     
     </div>
-<script src="js/tasks/getAgendaTask.js"></script>
+    <script src="js/tasks/getAgendaTask.js"></script>
 <script src="js/account/logout.js"></script>
 </body>
 </html>
